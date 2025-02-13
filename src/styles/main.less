@@ -1,0 +1,317 @@
+@import 'variables';
+@import 'maps';
+@import 'mixins';
+@import 'math';
+@import 'about.less';
+@import 'global.less';
+@import 'newtest.less';
+@import 'buttons.less';
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+
+    @media @breakpointTablet {
+        width: 90vw;
+    }
+
+    @media @breakpointMobile {
+        width: 80vw;
+    }
+}
+
+.navbar {
+    background-color: @primaryColor;
+    height: 74px;
+    border-bottom: 1px solid @strokeColor;
+
+    &--home {
+        background-color: @transparentNavHomeColor;
+    }
+
+    &__container {
+        .flexAlignItemsCenter(center, space-between);
+        height: 100%;
+        width: 800px;
+        margin: 0 auto;
+
+        @media @breakpointTablet {
+            width: 429px;
+        }
+    
+        @media @breakpointMobile {
+            width: 80vw;
+        }
+    }
+
+    &__brand {
+        color: @primaryTextColor;
+        font-size: #font-sizes[regular];
+        font-weight: #font-weights[bold];
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__list {
+        display: flex;
+
+        @media @breakpointMobile {
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 11vh;
+            right: 0;
+            width: 100vw;
+            height: 90vh;
+            background-color: @primaryColor;
+
+            &--is-hidden {
+                display: none;
+            }
+        }
+
+        &__item {
+        margin-left: 40px;
+        height: 74px;
+        display: flex;
+        align-items: center;
+
+        @media @breakpointTablet {
+            margin-left: 20px;
+        }
+
+        @media @breakpointMobile {
+            margin-left: 0;
+        }
+              
+        &--is-active {
+            border-bottom: 1px solid @primaryTextColor;
+            font-weight: #font-weights[semiBold];
+        }
+
+            &__link {
+            color: @primaryTextColor;
+            font-size: #font-sizes[regular];
+    
+            }
+        }
+    }
+
+    &__menu {
+        display: none;
+        width: 48px;
+        fill: @primaryTextColor;
+
+        @media @breakpointMobile {
+            display: block;
+
+            &--is-hidden {
+                display: none;
+            }
+        }
+    }
+}
+
+.hero {
+    height: 324px;
+    background-color: @primaryColor;
+    text-align: center;
+    padding-top: 118px ;
+    margin-bottom: 55px;
+
+    @media @breakpointMobile {
+        margin-bottom: 35px;
+    }
+
+    &--home {
+        height: 85.5vh;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: @transparentHeroHomeColor;
+
+        @media @breakpointTablet {
+            height: 90vh;
+        }
+
+        @media @breakpointMobile {
+            height: 85.2vh;
+        }
+
+        @media (@breakpointMobile), (@breakpointTablet) {
+            margin-bottom: 0;
+            position: static;
+        }
+
+        &::before {
+            display: none;
+
+            @media (@breakpointMobile), (@breakpointTablet){
+                display: block;
+                content: '';
+                z-index: -2;
+                background-image: url('https://img.freepik.com/fotos-gratis/homem-sorridente-usando-smartphone-moderno_23-2148793449.jpg?t=st=1739389100~exp=1739392700~hmac=0ead272a478f96290052a47e1b1116989199d4b61410a53cbb226860e5a0cd69&w=1380');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__video {
+        display: none;
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0.5;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @media @breakpointDesktop {
+            display: block;
+        }
+    }   
+
+    
+    &__title {
+        font-size: #font-sizes[title];
+        font-weight: #font-weights[bold];
+        color: @primaryTextColor;
+
+        &--home {
+            font-size: 48px;
+        }
+
+        @media @breakpointMobile {
+            font-size: #font-sizes[heroTitle];
+        }
+    }
+
+    &__subtitle {
+        font-size: #font-sizes[regular];
+        font-weight: #font-weights[thin];
+        color: @primaryTextColor;
+
+        &--home {
+            font-size: 48px;
+            font-weight: #font-weights[bold];
+
+            @media @breakpointMobile {
+                font-size: #font-sizes[heroTitle];
+            }
+        }
+    }
+}
+
+.toast__container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: none;
+    margin: 8px;
+
+    .toast {
+    width: 350px;
+    border-radius: 0px 10px 0px 0px;
+    color: @primaryTextColor;
+
+    @media @breakpointMobile {
+        width: 240px;
+    }
+
+        &__header {
+            height: 32px;
+            text-align: center;
+            border-radius: 10px 0px 0px 0px;
+            border-right: 10px solid @toastSucessHeaderBoderColor;
+            background-color: @toastSucessHeaderColor;
+            
+
+            &--error {
+                border-right: 10px solid @toastErrorHeaderBoderColor ;
+                background-color: @toastErrorHeaderColor;
+                
+            }
+
+            &__title {
+                font-size: #font-sizes[medium];
+            }
+        }
+
+        &__body {
+            border-right: 10px solid @toastSucessBodyBoderColor;
+            height: 57px;
+            padding: 8px;
+            background-color: @toastSucessBodyColor;
+            
+
+            &--error {
+                border-right: 10px solid @toastErrorHBodyBoderColor ;
+                background-color: @toastErrorBodyColor;
+                
+            }
+
+            &__description {
+                margin: 0;
+            }
+        }
+
+        &__progressbar{
+            height: 10px;
+            width: 100%;
+            
+            &--empty {
+                background-color: rgb(85, 85, 85);
+            }
+
+            &--full {
+                background-color: rgb(49, 226, 49);
+                width: 50%;
+                transition: all 300ms;
+                animation: progress-animation 3s forwards;
+            }
+
+            @keyframes progress-animation {
+                0% {
+                    width: 0%;
+                }
+                100% { 
+                    width: 100%; 
+                }
+            }
+            
+        }
+    }
+}
+
+.footer {
+    .flexAlignItemsCenter(center, center);
+    width: 100%;
+    height: 64px;
+    background-color: @footerColor;
+    &__list {
+    display: flex;
+    list-style: none;
+
+        &__item {
+            padding-right: 24px;
+
+            &__link {
+                color: @primaryColor;
+                font-weight: #font-weights[semiBold];
+
+            }
+        }
+    }
+}

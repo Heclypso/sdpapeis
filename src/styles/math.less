@@ -1,0 +1,6 @@
+// 16px é o contexto atual do body e é usado para 
+// o calculo da conversão de pixel para em
+.pixelParaEm(@alvoEmPixel, @contextoEmPixel: 16px) {
+    @resultado: (@alvoEmPixel / @contextoEmPixel) * 1em;
+}
+

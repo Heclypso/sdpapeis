@@ -1,0 +1,23 @@
+@import 'variables';
+
+#font-weights() {
+    black: 900;
+    bold: 800;
+    semiBold: 700;
+    regular:  400;
+    thin: 300;
+    light: 200;
+}
+
+// Os valores foram definidos como variáveis que 
+// foram declaradas no arquivo variables com o fim do usuário
+// final receber o valor convertido em EM
+#font-sizes() {
+    title: @title;
+    heroTitle: @heroTitle;
+    aboutTitle: @aboutTitle;
+    medium: @medium;
+    regular: @regular;
+    input: @input;
+    text: @text;
+}

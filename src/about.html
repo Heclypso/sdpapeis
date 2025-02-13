@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a class="navbar__brand" href="/">BXMailer</a>
+                <svg class="navbar__menu navbar__menu--is-hidden" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="48px" width="48px"/><line stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" x1="200" x2="56" y1="56" y2="200"/> <line stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" x1="200" x2="56" y1="200" y2="56"/></svg>
+                <svg class="navbar__menu" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="1" id="_1"><path d="M441.13,166.52h-372a15,15,0,1,1,0-30h372a15,15,0,0,1,0,30Z"/><path d="M441.13,279.72h-372a15,15,0,1,1,0-30h372a15,15,0,0,1,0,30Z"/><path d="M441.13,392.92h-372a15,15,0,1,1,0-30h372a15,15,0,0,1,0,30Z"/></g></svg>                
+                <ul id="list" class="navbar__list navbar__list--is-hidden">
+                    <li class="navbar__list__item">
+                        <a class="navbar__list__item__link" href="https://nodemailer-backend-one.vercel.app/newtest">New Test</a>
+                    </li>
+                    <li class="navbar__list__item navbar__list__item--is-active">
+                        <a class="navbar__list__item__link" href="#">About</a>
+                    </li>
+                    <li class="navbar__list__item">
+                        <a class="navbar__list__item__link" href="https://nodemailer-backend-one.vercel.app/feedback">Feedback</a>  
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <h1 class="hero__title">About</h1>
+            <h2 class="hero__subtitle">Learn about the project</h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="about">
+                <h2 class="about__title">About The Project</h2>
+                <p class="about__text">
+                    This project was developed as a clone of Putsmail with the only objective of practice Gulp and Less. 
+                </p>
+                <p class="about__text">
+                    There is another version of the project coded in Grunt and Sass; check it out.
+                </p>
+                <p class="about__text">
+                    All images and videos comes from freepik, check it out.
+                </p>
+                <p class="about__text">
+                    Homepage video: <a href="https://br.freepik.com/video-gratuito/foto-recortada-laptop-maos-mulher-negocios-sentado-lado-digitando_203305#fromView=search&page=1&position=22&uuid=9b2c7731-83bb-40ce-a17a-8ef08c7230aa">Click here</a> <br>
+                    Homepage image: <a href="https://br.freepik.com/fotos-gratis/homem-sorridente-usando-smartphone-moderno_11631653.htm#fromView=author&page=3&position=2&uuid=ad098815-4f94-4e01-b919-50fa84ad3820&query=sending+email">Click here</a>
+                </p>
+            </section>
+
+            <section class="terms__of__use">
+                <h2 class="terms__of__use__title">Terms of use</h2>
+                <ul class="terms__of__use__list">
+
+                    <li class="terms__of__use__list__item">
+                        By accessing or using our email-sending service (Bxtmailer), you agree to comolly with these Terms of Use. If you do not agree with these terms, please do not use the Service.
+                    </li>
+                    
+                    <li class="terms__of__use__list__item">
+                        Eligibility
+                        You must be at least 18 years old or have legal consent to use our Service. By using the Service, you confirm that you meet these requirements.
+                    </li>
+                    
+                    <li class="terms__of__use__list__item">
+                        Acceptable Use
+                        You agree to use the Service lawfully and ethically. You shall not:
+                        Use the Service for spam, phishing, or fraudulent activities.
+                        Send unsolicited emails or violate any applicable email regulations (e.g., CAN-SPAM Act, GDPR).
+                        Distribute harmful software, viruses, or malicious content.
+                        Impersonate another person or misrepresent your identity.
+                    </li>
+                      
+                    <li class="terms__of__use__list__item">
+                        User Responsibilities
+                        You are responsible for the content of the emails you send.
+                        You must ensure your emails comply with all applicable laws and regulations.
+                        You must not overload or abuse the Service in any way.
+                    </li>
+                    
+                    <li class="terms__of__use__list__item">
+                        Privacy Policy
+                        Your use of the Service is also governed by our Privacy Policy, which outlines how we collect, use, and protect your data. Please review it carefully.
+                    </li>
+                    
+                    <li class="terms__of__use__list__item">
+                        Service Availability & Changes
+                        We reserve the right to modify, suspend, or discontinue the Service at any time without notice. We are not liable for any interruptions or changes to the Service.
+                    </li>
+                    
+                    <li class="terms__of__use__list__item">
+                        Limitation of Liability
+                    We are not responsible for any direct, indirect, incidental, or consequential damages resulting from your use of the Service. The Service is provided "as is" without warranties of any kind.
+                    </li>
+                    
+                    <li class="terms__of__use__list__item">
+                        Termination
+                        We reserve the right to terminate or suspend your access to the Service at our discretion if you violate these Terms.
+                    </li>
+                    
+                    <li class="terms__of__use__list__item">
+                        Governing Law
+                        These Terms shall be governed by and construed in accordance with the laws of Brazilian legislation on data protection and internet.
+                    </li>
+                    
+                    <li class="terms__of__use__list__item">
+                        Changes to the Terms
+                        We may update these Terms from time to time. Continued use of the Service after any modifications constitutes your acceptance of the new Terms.
+                    </li> 
+                    
+                    <li class="terms__of__use__list__item">
+                        Contact Us
+                        If you have any questions about these Terms, please contact us at bxtmailer@gmail.com.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="privacy__policy">
+                <h2 class="privacy__policy__title">Privacy Policy</h2>
+                <p class="privacy__policy__text">
+                    This project was developed as a clone of Putsmail with the only objective of practice Grunt, Sass, Gulp and Less. 
+                    There is another version of the project coded in Grunt and Sass; check it out.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <script src="./scripts/menu.min.js"></script>
+</body>
+</html>

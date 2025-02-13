@@ -1,0 +1,7 @@
+.env
+node_modules
+dist
+dev
+coverage
+test
+jest.config.js
