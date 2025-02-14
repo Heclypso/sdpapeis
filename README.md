@@ -6,7 +6,8 @@ less: pré-processador de css.
 nodemailer: biblioteca responsavel pelo envio de emails.
 express: framework web para nodejs, cria o servidor backend.
 cors: middleware que permite a comunicação entre o frontend com o backend.
-dotenv: armazena as variaveis de ambiente responsaveis por guardar as informações do email e da senha de app.
+dotenv: armazena as variaveis de ambiente localmente que responsaveis por guardar as informações do email e da senha de app.
+babel: transpila o javascript para evitar conflitos de compatibilidade com outros dispositivos e navegadores, parametro de > 0.25% de navegadores mais comuns.
+jest: utilizado para os testes do javascript localmente.
 
-Essa versão trabalha o gulp juntamente com o less, outra versão do projeto que pode ser encontrada em https://outraversaoprojeto.com utiliza sass e grunt.
-Eu escolhi trabalhar especificadamente o gulp com o less e o sass com o grunt porque essas combinações foram pouco exploradas no meu curso de Engenheiro Front End e eu senti a necessidade de explorar elas.
+Eu escolhi trabalhar especificadamente o gulp com o less porque essa combinação foi pouco explorada no meu curso de Engenheiro Front End.
