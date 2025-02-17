@@ -4,11 +4,12 @@
 @import 'math';
 @import 'about.less';
 @import 'global.less';
-@import 'newtest.less';
+@import 'form.less';
 @import 'buttons.less';
 
 .container {
-    width: 800px;
+    height: 768px;
+    width: 1400px;
     margin: 0 auto;
 
     @media @breakpointTablet {
@@ -21,33 +22,16 @@
 }
 
 .navbar {
-    background-color: @primaryColor;
-    height: 74px;
-    border-bottom: 1px solid @strokeColor;
-
-    &--home {
-        background-color: @transparentNavHomeColor;
-    }
-
-    &__container {
-        .flexAlignItemsCenter(center, space-between);
-        height: 100%;
-        width: 800px;
-        margin: 0 auto;
-
-        @media @breakpointTablet {
-            width: 429px;
-        }
-    
-        @media @breakpointMobile {
-            width: 80vw;
-        }
-    }
+    position: sticky;
+    z-index: 1;
+    height: 96px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &__brand {
-        color: @primaryTextColor;
-        font-size: #font-sizes[regular];
-        font-weight: #font-weights[bold];
+        height: 77px;
 
         &:hover {
             cursor: pointer;
@@ -56,6 +40,7 @@
 
     &__list {
         display: flex;
+        margin-right: 40px;
 
         @media @breakpointMobile {
             flex-direction: column;
@@ -87,7 +72,6 @@
         }
               
         &--is-active {
-            border-bottom: 1px solid @primaryTextColor;
             font-weight: #font-weights[semiBold];
         }
 
@@ -115,103 +99,261 @@
 }
 
 .hero {
-    height: 324px;
-    background-color: @primaryColor;
+    position: relative;
+    margin-top: -96px;
+    height: 816px;
+    background: @heroBackgroundColor;
     text-align: center;
-    padding-top: 118px ;
-    margin-bottom: 55px;
+    display: flex;
+    justify-content: center;
 
     @media @breakpointMobile {
         margin-bottom: 35px;
     }
 
-    &--home {
-        height: 85.5vh;
-        margin-bottom: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: @transparentHeroHomeColor;
+    &__container {
+        position: absolute;
+        bottom: 5%;
+        color: @primaryTextColor;
 
-        @media @breakpointTablet {
-            height: 90vh;
-        }
-
-        @media @breakpointMobile {
-            height: 85.2vh;
-        }
-
-        @media (@breakpointMobile), (@breakpointTablet) {
-            margin-bottom: 0;
-            position: static;
-        }
-
-        &::before {
-            display: none;
-
-            @media (@breakpointMobile), (@breakpointTablet){
-                display: block;
-                content: '';
-                z-index: -2;
-                background-image: url('https://servidor-estatico-rg7q5fvxy-gabriel-munhaks-projects.vercel.app/alternative-home-picture.jpg');
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
+        &__title {
+            font-size: #font-sizes[title];
+            font-weight: #font-weights[bold];
+            
+    
+            @media @breakpointMobile {
+                font-size: #font-sizes[heroTitle];
             }
         }
-    }
-
-    &__video {
-        display: none;
-        content: '';
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        left: 0.5;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-        @media @breakpointDesktop {
-            display: block;
-        }
-    }   
-
     
-    &__title {
-        font-size: #font-sizes[title];
-        font-weight: #font-weights[bold];
-        color: @primaryTextColor;
-
-        &--home {
-            font-size: 48px;
-        }
-
-        @media @breakpointMobile {
-            font-size: #font-sizes[heroTitle];
-        }
-    }
-
-    &__subtitle {
-        font-size: #font-sizes[regular];
-        font-weight: #font-weights[thin];
-        color: @primaryTextColor;
-
-        &--home {
-            font-size: 48px;
-            font-weight: #font-weights[bold];
-
+        &__subtitle {
+            font-family: "Pacifico", serif;
+            font-style: normal;
+            font-size: #font-sizes[medium];
+            font-weight: #font-weights[thin];
+    
             @media @breakpointMobile {
                 font-size: #font-sizes[heroTitle];
             }
         }
     }
+
+    &::before {
+        content: '';
+        z-index: -1;
+        background-image: url('https://img.freepik.com/free-photo/interior-space-decorated-boho-style_23-2150771527.jpg?t=st=1739796237~exp=1739799837~hmac=23137f25df1063f4e46b3ee1b8291e1dcc8f2f2188a259038ea20779b2530fa5&w=1380');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        @media (@breakpointMobile), (@breakpointTablet){
+
+        }
+    }
+
+    }
+
+.about {
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    color: @primaryTextColor;
+    width: 100%;
+    position: relative;
+
+    .container {
+        position: relative;
+    }
+
+    &__content {
+        z-index: 1;
+        height: 500px;
+        width: 900px;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 40px;
+        position: absolute;
+        margin-top: 135px;
+        background-color: @primaryTransparentColor;
+        border: 1px solid @strokeColor;
+
+        &__title {
+            margin-bottom: 20px;
+            font-size: #font-sizes[title];
+            font-weight: #font-weights[bold];
+        }
+
+        &__text {
+            margin-bottom: 5px;
+            font-size: #font-sizes[medium];
+        }
+
+        &__link {
+            color: @primaryTextColor;
+            text-decoration: underline;
+            font-size: #font-sizes[medium];
+        }
+
+        &__counter {
+            margin-top: 75px;
+            display: flex;
+            font-size: #font-sizes[heroTitle];
+
+            &__reviews {
+                display: flex;
+                align-items: center;
+                margin-left: 60px;
+
+                &__number {
+                    margin-right: 8px;
+                    font-size: #font-sizes[counter];
+                    font-weight: #font-weights[bold];
+                }
+            }
+
+            &__clients {
+                display: flex;
+                align-items: center;
+
+                &__number {
+                    margin-right: 8px;
+                    font-size: #font-sizes[counter];
+                    font-weight: #font-weights[bold];
+                }
+            }
+        }
+    }
+
+    &__image {
+        width: 700px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.gallery {
+    height: 1000px;
+    width: 100%;
+
+    .container {
+        height: auto;
+    }
+
+    &__title {
+        color: @primaryTextColor;
+        margin-left: 80px;
+        margin-bottom: 20px;
+        font-size: #font-sizes[title];
+        font-weight: #font-weights[bold];
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+        gap: 32px;
+
+        &__image {
+            width: 450px;
+            height: 450px;
+        }
+    }
+}
+
+.reviews {
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .container {
+        width: auto;
+        height: auto;
+    }
+
+    &__container {
+        display: flex;
+    }
+
+    &__title {
+        margin-left: 80px;
+        color: @primaryTextColor;
+        margin-bottom: 20px;
+        font-size: #font-sizes[title];
+        font-weight: #font-weights[bold];
+    }
+
+    &__card {
+        position: relative;
+        margin-right: 40px;
+        padding: 40px;
+        padding-top: 100px;
+        width: 400px;
+        height: 564px;
+        border: 1px solid @strokeColor;
+
+        &__quotation-marks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 24px;
+        }
+
+
+        &__text {
+            font-size: #font-sizes[regular];
+            color: @primaryTextColor;
+            margin-bottom: 32px;
+        }
+
+        &__stars {
+
+        }
+    }
+}
+
+.contact {
+    height: 1000px;
+    position: relative;
+
+    &::before {
+        content: '';
+        z-index: -1;
+        background-image: url('https://img.freepik.com/free-photo/view-room-interior-with-furniture-copy-space_23-2150680547.jpg?t=st=1739822997~exp=1739826597~hmac=1a3929ea8a95a2ec95331660b9b1d815d7fed5d58901280abf4664b0226c5dc9&w=1060');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__container {
+        display: flex;
+        height: 100%;
+    }
+    
+    &__aside {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__content {
+            height: 400px;
+            width: 300px;
+            background-color: @primaryTextColor;
+            border-radius: 25px;
+        }
+    }
+
 }
 
 .toast__container {

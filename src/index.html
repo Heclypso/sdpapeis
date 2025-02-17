@@ -3,28 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>New Test</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/main.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar--home">
+        <nav class="navbar">
+            <img src="./images/brand-image.png" alt="SDPapeis" class="navbar__brand">
+            <svg class="navbar__menu navbar__menu--is-hidden" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="48px" width="48px"/><line stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" x1="200" x2="56" y1="56" y2="200"/> <line stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" x1="200" x2="56" y1="200" y2="56"/></svg>
+            <svg class="navbar__menu" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="1" id="_1"><path d="M441.13,166.52h-372a15,15,0,1,1,0-30h372a15,15,0,0,1,0,30Z"/><path d="M441.13,279.72h-372a15,15,0,1,1,0-30h372a15,15,0,0,1,0,30Z"/><path d="M441.13,392.92h-372a15,15,0,1,1,0-30h372a15,15,0,0,1,0,30Z"/></g></svg>                
+            <ul id="list" class="navbar__list navbar__list--is-hidden">
+                <li class="navbar__list__item navbar__list__item--is-active">
+                    <a class="navbar__list__item__link" href="#about">Sobre</a>
+                </li>
+                <li class="navbar__list__item">
+                    <a class="navbar__list__item__link" href="#gallery">Galeria</a>
+                </li>
+                <li class="navbar__list__item">
+                    <a class="navbar__list__item__link" href="#reviews">Avaliações</a>
+                </li>
+                <li class="navbar__list__item">
+                    <a class="navbar__list__item__link" href="#contact">Contato</a>
+                </li>
+            </ul>
         </nav>
 
-        <div class="hero hero--home">
-            <h1 class="hero__title hero__title--home">Welcome to BXMailer</h1>
-            <h2 class="hero__subtitle hero__subtitle--home">HTML email tester</h2>
-
-            <a href="https://bxmailer-api.vercel.app/newtest" class="hero__button">Try</a>
-
-            <video autoplay muted loop class="hero__video">
-                <source src="https://servidor-estatico-alpha-six.vercel.app/home-video.mp4" type="video/mp4">
-            </video>            
+        <div class="hero">
+            <div class="hero__container">
+                <h1 class="hero__title">SOLUÇÕES DECORATIVAS</h1>
+                <h2 class="hero__subtitle">"Detalhes que transformam espaços"</h2>
+                <button class="hero__button" type="button">V</button>
+            </div>
         </div>
     </header>
+
+    <main>
+        <section id="about" class="about">
+            <div data-aos="fade-up" class="container">
+                <div data-aos="fade-up" class="about__content">
+                    <h2 class="about__content__title">Sobre</h2>
+                    <p class="about__content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in orci turpis. Aliquam ut egestas velit. Praesent eget convallis purus. Proin nec arcu sed elit rutrum euismod. Duis id molestie sapien. Sed feugiat ac augue nec maximus. Fusce fermentum id dolor at posuere. Pellentesque elementum tempus ante, eget dictum nibh rhoncus id. </p>
+                    <a class="about__content__link" href="#">Saiba mais</a>
+                    <div class="about__content__counter">
+                        <p class="about__content__counter__clients"><span class="about__content__counter__clients__number">100</span> Clientes</p>
+                        <p class="about__content__counter__reviews"><span class="about__content__counter__reviews__number">10</span> Avaliações</p>
+                    </div>
+                </div>
+                <img class="about__image" src="./images/form-background-image.jpg" alt="">
+            </div>
+        </section>
+    
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2 class="gallery__title">Galeria</h2>
+            </div>
+                <div class="gallery__container">
+                    <img data-aos="flip-right" data-aos-duration="1000" data-aos-offset="50" class="gallery__container__image" src="./images/form-background-image.jpg" alt="">
+                    <img data-aos="flip-right" data-aos-duration="1000" data-aos-offset="100" class="gallery__container__image" src="./images/form-background-image.jpg" alt="">
+                    <img data-aos="flip-right" data-aos-duration="1000" data-aos-offset="150" class="gallery__container__image" src="./images/form-background-image.jpg" alt="">
+                    <img data-aos="flip-right" data-aos-duration="1000" data-aos-offset="200" class="gallery__container__image" src="./images/form-background-image.jpg" alt="">
+                    <img data-aos="flip-right" data-aos-duration="1000" data-aos-offset="250" class="gallery__container__image" src="./images/form-background-image.jpg" alt="">
+                    <img data-aos="flip-right" data-aos-duration="1000" data-aos-offset="300" class="gallery__container__image" src="./images/form-background-image.jpg" alt="">
+                    <img data-aos="flip-right" data-aos-duration="1000" data-aos-offset="350" class="gallery__container__image" src="./images/form-background-image.jpg" alt="">
+                    <img data-aos="flip-right" data-aos-duration="1000" data-aos-offset="400" class="gallery__container__image" src="./images/form-background-image.jpg" alt="">
+                </div>
+        </section>
+    
+        <section id="reviews" class="reviews">
+           <div data-aos="fade-up" class="container">
+            <h2 class="reviews__title">Avaliações</h2>
+                <div class="reviews__container">
+                    <div class="reviews__card">
+                        <img class="reviews__card__quotation-marks" src="./images/quotation-marks.png" alt="">
+                        <p class="reviews__card__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in orci turpis. Aliquam ut egestas velit. Praesent eget convallis purus. Proin nec arcu sed elit rutrum euismod. Duis id molestie sapien. Sed feugiat ac augue nec maximus. 
+                        </p>
+                        <img class="reviews__card__stars" src="./images/stars.png" alt="">
+                    </div>
+        
+                    <div class="reviews__card">
+                        <img class="reviews__card__quotation-marks" src="./images/quotation-marks.png" alt="">
+                        <p class="reviews__card__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in orci turpis. Aliquam ut egestas velit. Praesent eget convallis purus. Proin nec arcu sed elit rutrum euismod. Duis id molestie sapien. Sed feugiat ac augue nec maximus. 
+                        </p>
+                        <img class="reviews__card__stars" src="./images/stars.png" alt="">
+                    </div>
+        
+                    <div class="reviews__card">
+                        <img class="reviews__card__quotation-marks" src="./images/quotation-marks.png" alt="">
+                        <p class="reviews__card__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in orci turpis. Aliquam ut egestas velit. Praesent eget convallis purus. Proin nec arcu sed elit rutrum euismod. Duis id molestie sapien. Sed feugiat ac augue nec maximus. 
+                        </p>
+                        <img class="reviews__card__stars" src="./images/stars.png" alt="">
+                    </div>
+                </div>
+           </div>
+        </section>
+    
+        <section id="contact" class="contact">
+                <div data-aos="fade-up" class="contact__container">
+                    <div class="contact__aside">
+                        <div class="contact__aside__content">
+                            <h3>Local</h3>
+                            <p></p>
+                            <h3>Telefone</h3>
+                            <p></p>
+                            <h3>Horario</h3>
+                        </div>
+                    </div>
+                    <form id="form" class="form">
+                        <h2 class="form__title">Formulário de Contato</h2>
+                        <div class="form__field">
+                            <label class="form__input__label" for="subject">Nome Completo</label>
+                            <input class="form__input" name="subject" id="subject" type="text" placeholder="Type the email subject">
+                        </div>
+        
+                        <div class="form__field">
+                            <label class="form__input__label" for="email">Email:</label>
+                            <input class="form__input" name="email" id="email" type="email" placeholder="email@example.com">
+                        </div>
+        
+                        <div class="form__field">
+                            <label class="form__input__label" for="message">Comentário ou mensagem</label>
+                            <textarea class="form__input form__input--text-area" name="message" id="message"></textarea>
+                        </div>
+        
+                        <div>
+                            <label class="form__input__label--checkbox" for="checkbox">I agree to the <a class="form__input__label--link" href="./about.html">terms of use</a></label>
+                            <input class="form__input--checkbox" name="checkbox" id="checkbox" type="checkbox">
+                        </div>
+                         
+                        <button type="submit" class="submit__button">Enviar</button>
+                    </form>
+                </div>
+        </section>
+    
+        <div id="toast-container" class="toast__container">
+            <div class="toast">
+                <header id="toast-header" class="toast__header">
+                    <strong id="toast-title" class="toast__header__title">Erro</strong>
+                </header>
+                <div id="toast-body" class="toast__body">
+                    <p id="toast-description" class="toast__body__description"></p>
+                </div>
+                <div class="toast__progressbar toast__progressbar--empty">
+                    <div class="toast__progressbar toast__progressbar--full">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <footer class="footer">
         <ul class="footer__list">
             <li class="footer__list__item">
@@ -35,5 +169,14 @@
             </li>
         </ul>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="./scripts/menu.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./scripts/newtest.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

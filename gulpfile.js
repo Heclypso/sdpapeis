@@ -35,7 +35,7 @@ function comprimeJavaScript(){
 
 function gulpWatch() {
   return watch('./src/styles/*.less', {ignoreInitial: false}, gulp.series(compilaLess)), 
-  watch('./src/*.html', {ignoreInitial: false}, gulp.series(criaReplace, replaceTemplate, apagaReplace)),
+  watch('./src/*.html', {ignoreInitial: false}, gulp.series(comprimeHtml)),
   watch('./src/scripts/*.js', {ignoreInitial: false}, gulp.series(comprimeJavaScript));
 }
 
@@ -46,7 +46,7 @@ function comprimeImagens(callback) {
   callback();
 }
 
-export default gulp.series(comprimeHtml, compilaLess, comprimeJavaScript, comprimeImagens)
+export default gulp.series(comprimeHtml, compilaLess, comprimeJavaScript, comprimeImagens, gulpWatch)
 
 export const watchFiles = () => {
   gulpWatch(); 
