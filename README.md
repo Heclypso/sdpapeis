@@ -1,4 +1,4 @@
-O Projeto foi criado como uma reimaginação do site https://putsmail.com, a principal utilização do projeto é o envio de emails html.
+O Projeto foi criado com o intuito de servir como uma landing page.
 As seguintes tecnologias foram utilizadas durante o desenvolvimento do projeto com os seguintes objetivos:
 
 gulp: automatizador de tarefas.
