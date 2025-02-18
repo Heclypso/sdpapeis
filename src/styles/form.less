@@ -7,7 +7,16 @@
     padding-left: 84px;
     background-color: @primaryTextColor;
 
-    @media @breakpointMobile{
+    @media @breakpointTablet {
+        height: 650px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    @media @breakpointMobile {
         height: 520px;
         width: 100%;
         display: flex;
@@ -21,7 +30,7 @@
         margin-bottom: 40px;
         font-size: #font-sizes[title];
 
-        @media @breakpointMobile{
+        @media @breakpointMobile, @breakpointTablet{
             text-align: center;
             margin-top: 24px;
             margin-bottom: 24px;
@@ -38,7 +47,7 @@
         display: flex;
         flex-direction: column;
 
-        @media @breakpointMobile{
+        @media @breakpointMobile, @breakpointTablet{
             width: 90%;
         }
 
@@ -59,7 +68,7 @@
         background-color: @inputColor;
         color: @inputTextColor;
 
-        @media @breakpointMobile{
+        @media @breakpointMobile, @breakpointTablet{
             width: 100%;
             height: 60px;
             font-size: #font-sizes[aboutTitle];
@@ -73,7 +82,7 @@
             height: 327px;
             color: @primaryTextColor;
 
-            @media @breakpointMobile{    
+            @media @breakpointMobile, @breakpointTablet{    
                 height: 90px;
                 border-radius: 10px;
             }
