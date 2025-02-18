@@ -150,10 +150,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-
-        @media (@breakpointMobile), (@breakpointTablet){
-
-        }
     }
 
     }
@@ -166,8 +162,16 @@
     width: 100%;
     position: relative;
 
+    @media @breakpointMobile{
+        height: 740px;
+    }
+
     .container {
         position: relative;
+
+        @media @breakpointMobile{
+            width: 90%;
+        }
     }
 
     &__content {
@@ -181,6 +185,11 @@
         margin-top: 135px;
         background-color: @primaryTransparentColor;
         border: 1px solid @strokeColor;
+
+        @media @breakpointMobile{
+            width: 90%;
+            padding: 0;
+        }
 
         &__title {
             margin-bottom: 20px;
@@ -234,12 +243,16 @@
         height: 100%;
         position: absolute;
         right: 0;
+
+        @media @breakpointMobile{
+            width: 100%;
+        }
     }
 }
 
 .gallery {
     height: 1000px;
-    width: 100%;
+    width: 100%;    
 
     .container {
         height: auto;
@@ -271,6 +284,10 @@
     display: flex;
     align-items: center;
 
+    @media @breakpointMobile{
+        height: 1900px;
+    }
+
     .container {
         width: auto;
         height: auto;
@@ -278,6 +295,12 @@
 
     &__container {
         display: flex;
+
+        @media @breakpointMobile{
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: -75px;
+        }
     }
 
     &__title {
@@ -286,6 +309,11 @@
         margin-bottom: 20px;
         font-size: #font-sizes[title];
         font-weight: #font-weights[bold];
+
+        @media @breakpointMobile{
+            margin-left: 0;
+            text-align: center;
+        }
     }
 
     &__card {
@@ -296,6 +324,12 @@
         width: 400px;
         height: 564px;
         border: 1px solid @strokeColor;
+
+        @media @breakpointMobile{
+            width: 90%;
+            margin-bottom: 5%;
+            margin-right: 0;
+        }
 
         &__quotation-marks {
             position: absolute;
@@ -321,6 +355,10 @@
     height: 1000px;
     position: relative;
 
+    @media @breakpointMobile{
+        height: 520px;
+    }
+
     &::before {
         content: '';
         z-index: -1;
@@ -333,6 +371,10 @@
         left: 0;
         width: 100%;
         height: 100%;
+
+        @media @breakpointMobile{
+            display: none;
+        } 
     }
 
     &__container {
@@ -345,6 +387,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media @breakpointMobile{
+            display: none;
+        }
 
         &__content {
             height: 400px;

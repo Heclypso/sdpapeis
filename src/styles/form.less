@@ -7,10 +7,25 @@
     padding-left: 84px;
     background-color: @primaryTextColor;
 
+    @media @breakpointMobile{
+        height: 520px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
     &__title {
         margin-top: 80px;
         margin-bottom: 40px;
         font-size: #font-sizes[title];
+
+        @media @breakpointMobile{
+            text-align: center;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
     }
 
     &--feedback {
@@ -22,6 +37,15 @@
         margin-bottom: 24px;
         display: flex;
         flex-direction: column;
+
+        @media @breakpointMobile{
+            width: 90%;
+        }
+
+        &--checkbox {
+            width: 88%;
+            margin-top: -10px;
+        }
     }
 
     &__input {
@@ -35,11 +59,24 @@
         background-color: @inputColor;
         color: @inputTextColor;
 
+        @media @breakpointMobile{
+            width: 100%;
+            height: 60px;
+            font-size: #font-sizes[aboutTitle];
+            font-weight: #font-weights[thinMedium];
+            line-height: 22px;
+        }
+
         &--text-area {
             margin-bottom: 0;
             border-radius: 0;
             height: 327px;
             color: @primaryTextColor;
+
+            @media @breakpointMobile{    
+                height: 90px;
+                border-radius: 10px;
+            }
         }
 
         &--checkbox {
@@ -54,9 +91,17 @@
             font-size: #font-sizes[medium];
             color: @labelTextColor;
 
+            @media @breakpointMobile{
+                display: none;
+            }
+
             &--checkbox {
                 font-weight: #font-weights[light];
                 font-size: #font-sizes[medium];
+
+                @media @breakpointMobile{
+                    font-size: #font-sizes[aboutTitle];
+                }
             }
 
             &--link {
