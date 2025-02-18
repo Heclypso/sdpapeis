@@ -467,21 +467,67 @@
 }
 
 .footer {
+    position: absolute;
     .flexAlignItemsCenter(center, center);
     width: 100%;
-    height: 64px;
+    height: 370px;
     background-color: @footerColor;
+    padding: 34px;
+
+    .container {
+        height: 100%;
+    }
+
+    &__brand {
+        height: 77px;
+        margin-bottom: 45px;
+    }
+
     &__list {
     display: flex;
     list-style: none;
 
         &__item {
+            display: flex;
+            flex-direction: column;
             padding-right: 24px;
+            margin-right: 48px;
+            
+            &--right {
+                margin-left: auto;
+                display: flex;
+                text-align: right;
+            }
+            
+            &__container {
+                display: flex;
+                justify-content: right;
+            }
+            
+            &__title {
+                font-weight: #font-weights[bold];
+                font-size: #font-sizes[medium];
+                color: @primaryTextColor;
+                padding-bottom: 16px; 
+            }
 
             &__link {
-                color: @primaryColor;
-                font-weight: #font-weights[semiBold];
+                color: @primaryTextColor;
+                font-weight: #font-weights[medium];
+                font-style: normal;
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 6px; 
 
+                &--right {
+                    margin-bottom: 16px;
+                }
+
+                &__icon {
+                    width: 50px;
+                    border-radius: 50%;
+                    margin-left: 24px;
+                }
             }
         }
     }
