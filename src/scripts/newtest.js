@@ -36,12 +36,12 @@ const botao = document.getElementsByTagName('button')[0].addEventListener('click
 
     $('.form').validate({
         rules: {
+            name: {
+                required: true
+            },
             email: {
                 required: true,
                 email: true
-            },
-            subject: {
-                required: true
             },
             message: {
                 required: true
@@ -51,10 +51,10 @@ const botao = document.getElementsByTagName('button')[0].addEventListener('click
             }
         },
         messages: {
-            email: 'Enter a valid email.',
-            subject: 'Enter a subject.',
-            message: 'Enter a message or an HTML email.',
-            checkbox: 'Check the box',
+            name: 'Digite seu nome',
+            email: 'Digite um email valido',
+            message: 'Digite uma mensagem',
+            checkbox: 'Aceite os termos de uso',
         },
         submitHandler: function() {
             toastContainer.style.display = 'block';

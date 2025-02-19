@@ -36,7 +36,7 @@
             <div class="hero__container">
                 <h1 class="hero__title">SOLUÇÕES DECORATIVAS</h1>
                 <h2 class="hero__subtitle">"Detalhes que transformam espaços"</h2>
-                <button class="hero__button" type="button">V</button>
+                <a href="#about"><button class="hero__button"><img src="./images/seta-para-baixo.png" alt=""></button></a>
             </div>
         </div>
     </header>
@@ -168,8 +168,8 @@
                     <form id="form" class="form">
                         <h2 class="form__title">Entre em Contato</h2>
                         <div class="form__field">
-                            <label class="form__input__label" for="subject">Nome Completo</label>
-                            <input class="form__input" name="subject" id="subject" type="text" placeholder="Seu nome">
+                            <label class="form__input__label" for="name">Nome Completo</label>
+                            <input class="form__input" name="name" id="name" type="text" placeholder="Seu nome">
                         </div>
         
                         <div class="form__field">
@@ -177,13 +177,13 @@
                             <input class="form__input" name="email" id="email" type="email" placeholder="Seu email">
                         </div>
         
-                        <div class="form__field">
+                        <div class="form__field form__field--message">
                             <label class="form__input__label" for="message">Comentário ou mensagem</label>
                             <textarea class="form__input form__input--text-area" name="message" id="message" placeholder="Sua mensagem"></textarea>
                         </div>
         
                         <div class="form__field--checkbox">
-                            <label class="form__input__label--checkbox" for="checkbox">I agree to the <a class="form__input__label--link" href="./about.html">terms of use</a></label>
+                            <label class="form__input__label--checkbox" for="checkbox">Eu aceito os <a class="form__input__label--link" href="./about.html">termos de uso</a></label>
                             <input class="form__input--checkbox" name="checkbox" id="checkbox" type="checkbox">
                         </div>
                          
@@ -232,6 +232,44 @@
                     </div>
                 </li>
             </ul>
+            <div class="footer__accordions">
+                <div class="footer__accordions__container">
+                    <div class="footer__accordions__header">
+                        Sobre Nós 
+                        <img class="footer__accordions__header__icon" src="./images/seta-para-baixo.png" alt="">
+                    </div>
+                    <div class="footer__accordions__body footer__accordions__body-is--hidden">Sobre Nós</div>
+                </div>
+
+                <div class="footer__accordions__container">
+                    <div class="footer__accordions__header">
+                        Links Úteis
+                        <img class="footer__accordions__header__icon" src="./images/seta-para-baixo.png" alt="">
+                    </div>
+                    <div class="footer__accordions__body footer__accordions__body-is--hidden">
+                        <a class="footer__list__item__link" href="#">Instagram</a> 
+                        <a class="footer__list__item__link" href="#">Facebook</a>
+                        <a class="footer__list__item__link" href="#">Whatsapp</a>  
+                    </div>
+                </div>
+
+                <div class="footer__accordions__container">
+                    <div class="footer__accordions__header">
+                        Navegação
+                        <img class="footer__accordions__header__icon" src="./images/seta-para-baixo.png" alt="">
+                    </div>
+                    <div class="footer__accordions__body footer__accordions__body-is--hidden">
+                        a
+                    </div>
+                </div>
+
+                <div class="footer__accordions__footer">
+                    <a class="footer__list__item__link" href="#">Contato</a>
+                    <a class="footer__list__item__link" href="#">Acessibilidade</a>
+                    <a class="footer__list__item__link" href="#">Termos de Uso</a>
+                    <a class="footer__list__item__link" href="#">Preferência de Cookies</a> 
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -240,6 +278,7 @@
     <script src="./scripts/menu.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./scripts/newtest.min.js"></script>
+    <script src="./scripts/footer.min.js"></script>
     <script>
         AOS.init();
     </script>

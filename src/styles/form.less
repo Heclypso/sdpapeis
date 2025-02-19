@@ -3,7 +3,6 @@
     height: 584px;
     width: 50%;
     height: 100%;
-    margin-bottom: 220px;
     padding-left: 84px;
     background-color: @primaryTextColor;
 
@@ -17,11 +16,12 @@
     }
 
     @media @breakpointMobile {
-        height: 520px;
+        height: 565px;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         padding-left: 0;
     }
 
@@ -30,16 +30,21 @@
         margin-bottom: 40px;
         font-size: #font-sizes[title];
 
-        @media @breakpointMobile, @breakpointTablet{
+        @media @breakpointTablet {
+            margin-top: 8px;
+            margin-bottom: 8px;
             text-align: center;
-            margin-top: 24px;
-            margin-bottom: 24px;
+        }
+
+        @media @breakpointMobile{
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 16px;
         }
     }
 
     &--feedback {
         margin-bottom: 0;
-
     }
 
     &__field {
@@ -51,9 +56,12 @@
             width: 90%;
         }
 
+        &--message {
+            margin-bottom: 0;
+        }
+
         &--checkbox {
-            width: 88%;
-            margin-top: -10px;
+            width: 90%;
         }
     }
 
@@ -80,7 +88,6 @@
             margin-bottom: 0;
             border-radius: 0;
             height: 327px;
-            color: @primaryTextColor;
 
             @media @breakpointMobile, @breakpointTablet{    
                 height: 90px;
