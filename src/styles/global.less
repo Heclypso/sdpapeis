@@ -7,6 +7,28 @@
     text-decoration: none;
 }
 
+.container {
+    height: 768px;
+    width: 80%;
+    margin: 0 auto;
+    
+    &--info {
+        width: 75%;
+        height: 100%;
+        border: 1px solid @strokeColor;
+        margin-top: 56px;
+        margin-bottom: 56px;
+    }
+
+    @media @breakpointTablet {
+        width: 90vw;
+    }
+
+    @media @breakpointMobile {
+        width: 80vw;
+    }
+}
+
 body {
     background-color: @secondaryColor;
 }

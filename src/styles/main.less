@@ -6,20 +6,7 @@
 @import 'global.less';
 @import 'form.less';
 @import 'buttons.less';
-
-.container {
-    height: 768px;
-    width: 1400px;
-    margin: 0 auto;
-
-    @media @breakpointTablet {
-        width: 90vw;
-    }
-
-    @media @breakpointMobile {
-        width: 80vw;
-    }
-}
+@import 'info.less';
 
 .navbar {
     position: sticky;
@@ -35,7 +22,7 @@
     }
 
     &__brand {
-        height: 77px;
+        height: 64px;
 
         @media @breakpointMobile{
             height: 4rem;
@@ -64,6 +51,10 @@
             &--is-hidden {
                 display: none;
             }
+        }
+
+        @media @breakpointTablet {
+            top: 8vh;
         }
 
         &__item {
@@ -111,7 +102,7 @@
 .hero {
     position: relative;
     margin-top: -96px;
-    height: 816px;
+    height: 700px;
     width: 100%;
     background: @heroBackgroundColor;
     text-align: center;
@@ -161,28 +152,29 @@
     }
 
 .about {
-    height: 1000px;
+    height: 100vh;
+    color: @primaryTextColor;
     display: flex;
     align-items: center;
-    color: @primaryTextColor;
     width: 100%;
     position: relative;
+    margin-bottom: 0;
 
     @media @breakpointTablet {
+        padding: 16px;
         height: auto;
         position: static;
-        margin-bottom: 50px;
     }
 
     @media @breakpointMobile {
         padding: 16px;
         height: auto;
         position: static;
-        margin-bottom: 50px;
     }
 
     .container {
         position: relative;
+        height: 80%;
 
         @media @breakpointMobile, @breakpointTablet {
             width: 100%;
@@ -200,11 +192,12 @@
         padding-right: 80px;
         padding-top: 40px;
         position: absolute;
-        margin-top: 135px;
+        top: 10%;
         background-color: @primaryTransparentColor;
         border: 1px solid @strokeColor;
 
-        @media @breakpointTablet, @breakpointTablet {
+        @media @breakpointTablet {
+            height: 400px;
             width: 100%;
         }
 
@@ -220,7 +213,7 @@
         }
 
         @media @breakpointMobile {
-            height: 900px;
+            height: 450px;
             width: 100%;
             padding-left: 24px;
             padding-right: 40px;
@@ -317,8 +310,8 @@
 }
 
 .gallery {
-    height: 1000px;
-    width: 100%;    
+    min-height: 400px;
+    width: 100%;   
 
     @media @breakpointTablet {
         height: auto;
@@ -331,12 +324,16 @@
     }
 
     .container {
-        height: auto;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     &__title {
         color: @primaryTextColor;
-        margin-left: 80px;
         margin-bottom: 20px;
         font-size: #font-sizes[title];
         font-weight: #font-weights[bold];
@@ -350,13 +347,13 @@
     &__container {
         display: grid;
         grid-template-columns: 2fr 2fr 2fr 2fr;
-        gap: 32px;
+        gap: 24px;
         position: relative;
 
         @media @breakpointMobile, @breakpointTablet{
             gap: 16px;
             grid-template-columns: 1fr;
-            padding: 16px;
+            padding: 0px 16px;
         }
 
         &__image {
@@ -367,43 +364,47 @@
 }
 
 .reviews {
-    height: 1000px;
+    min-height: 100vh;
     width: 100%;
     display: flex;
-    
-
-    @media @breakpointTablet {
-        height: 1400px;
-    }
-
-    @media @breakpointMobile{
-        height: 2500px;
-        padding: 16px;
-    }
+    align-items: center;
+    justify-content: center;
 
     .container {
-        width: auto;
-        height: auto;
+        height: 80%;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media @breakpointMobile{
+            display: block;
+        }
     }
 
-    &__container {
+    &__content {
         display: flex;
+        height: 600px;;
+        gap: 16px;
 
         @media @breakpointTablet {
+            height: 100%;
+            margin-bottom: 24px;
             display: grid;
             grid-template-columns: 2fr 2fr;
-            gap: 20px;
         }
 
         @media @breakpointMobile {
+            height: 100%;
             flex-direction: column;
             align-items: center;
-            gap: 40px;
+            margin-bottom: 24px;
         }
     }
 
     &__title {
-        margin-left: 80px;
         color: @primaryTextColor;
         margin-bottom: 20px;
         font-size: #font-sizes[title];
@@ -417,11 +418,10 @@
 
     &__card {
         position: relative;
-        margin-right: 40px;
         padding: 40px;
         padding-top: 100px;
-        width: 400px;
-        height: 564px;
+        width: 316px;
+        height: 480px;
         border: 1px solid @strokeColor;
 
         @media @breakpointTablet {
@@ -456,7 +456,7 @@
 }
 
 .contact {
-    height: 1000px;
+    height: 100vh;
     position: relative;
 
     @media @breakpointTablet{
@@ -465,7 +465,6 @@
 
     @media @breakpointMobile{
         height: 565px;
-        position: static;
     }
 
     &::before {
@@ -484,7 +483,6 @@
 
         @media @breakpointMobile, @breakpointTablet{
             display: none;
-    
         } 
     }
 
@@ -627,7 +625,7 @@
 .footer {
     .flexAlignItemsCenter(center, center);
     width: 100%;
-    height: 370px;
+    height: 350px;
     background-color: @footerColor;
     padding: 34px;
 
@@ -645,7 +643,7 @@
     }
 
     &__brand {
-        height: 77px;
+        height: 65px;
         margin-bottom: 45px;
 
         @media @breakpointMobile, @breakpointTablet{
@@ -658,60 +656,63 @@
 
     &__list {
     display: flex;
+    justify-content: space-between;
     list-style: none;
 
     @media @breakpointMobile, @breakpointTablet{
         display: none;
     }
 
-        &__item {
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-right: 56px;
+        
+        &--right {
+            margin-left: auto;
             display: flex;
-            flex-direction: column;
-            padding-right: 24px;
-            margin-right: 48px;
-            
+            text-align: right;
+            padding-right: 0px;
+            margin-right: 0px;
+        }
+        
+        &__container {
+            display: flex;
+            justify-content: right;
+        }
+        
+        &__title {
+            font-weight: #font-weights[bold];
+            font-size: #font-sizes[regular];
+            color: @primaryTextColor;
+            padding-bottom: 16px; 
+        }
+
+        &__link {
+            color: @primaryTextColor;
+            font-weight: #font-weights[medium];
+            font-style: normal;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 6px; 
+
+            @media @breakpointMobile, @breakpointTablet{
+                font-weight: #font-weights[thin];
+            }
+
             &--right {
-                margin-left: auto;
-                display: flex;
-                text-align: right;
-            }
-            
-            &__container {
-                display: flex;
-                justify-content: right;
-            }
-            
-            &__title {
-                font-weight: #font-weights[bold];
-                font-size: #font-sizes[medium];
-                color: @primaryTextColor;
-                padding-bottom: 16px; 
+                margin-bottom: 16px;
             }
 
-            &__link {
-                color: @primaryTextColor;
-                font-weight: #font-weights[medium];
-                font-style: normal;
-                font-size: 16px;
-                line-height: 19px;
-                margin-bottom: 6px; 
-
-                @media @breakpointMobile, @breakpointTablet{
-                    font-weight: #font-weights[thin];
-                }
-
-                &--right {
-                    margin-bottom: 16px;
-                }
-
-                &__icon {
-                    width: 50px;
-                    border-radius: 50%;
-                    margin-left: 24px;
-                }
+            &__icon {
+                width: 50px;
+                border-radius: 50%;
+                margin-left: 24px;
             }
         }
     }
+}
 
     &__accordions {
         @media @breakpointDesktop {
