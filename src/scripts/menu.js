@@ -22,3 +22,11 @@ for (let i = 0; i < menu.length; i++) { // adiciona o evento de click nos dois i
 }
 
 // module.exports = {hiddenToggle, navToggle} // expotando as funções para serem utilizadas em testes no arquivo menu.test.js dentro da pasta test na raiz do projeto
+
+const images = document.querySelectorAll('.gallery__container__image');
+
+for (let i = 0; i < images.length; i ++) {
+    images[i].addEventListener('click', function(){
+        images
+    });
+}

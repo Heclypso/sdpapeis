@@ -118,10 +118,6 @@
     display: flex;
     justify-content: center;
 
-    @media @breakpointMobile, @breakpointTablet {
-        margin-bottom: 35px;
-    }
-
     &__container {
         position: absolute;
         bottom: 5%;
@@ -179,6 +175,7 @@
     }
 
     @media @breakpointMobile {
+        padding: 16px;
         height: auto;
         position: static;
         margin-bottom: 50px;
@@ -188,7 +185,7 @@
         position: relative;
 
         @media @breakpointMobile, @breakpointTablet {
-            width: 90%;
+            width: 100%;
             position: static;
             display: flex;
             flex-direction: column-reverse;
@@ -354,10 +351,12 @@
         display: grid;
         grid-template-columns: 2fr 2fr 2fr 2fr;
         gap: 32px;
+        position: relative;
 
         @media @breakpointMobile, @breakpointTablet{
             gap: 16px;
-            grid-template-columns: 4fr 4fr;
+            grid-template-columns: 1fr;
+            padding: 16px;
         }
 
         &__image {
@@ -371,14 +370,15 @@
     height: 1000px;
     width: 100%;
     display: flex;
-    align-items: center;
+    
 
     @media @breakpointTablet {
         height: 1400px;
     }
 
     @media @breakpointMobile{
-        height: 2480px;
+        height: 2500px;
+        padding: 16px;
     }
 
     .container {
@@ -398,7 +398,7 @@
         @media @breakpointMobile {
             flex-direction: column;
             align-items: center;
-            margin-bottom: -75px;
+            gap: 40px;
         }
     }
 
@@ -432,7 +432,7 @@
 
         @media @breakpointMobile{
             width: 90%;
-            margin-bottom: 5%;
+            margin-bottom: 0;
             margin-right: 0;
         }
 
@@ -749,6 +749,7 @@
             justify-content: center;
             flex-direction: column;
             background-color: @footerColor;
+            border-bottom: 1px solid @footerAccordionsStrokeColor;
 
             &-is--hidden {
                 display: none;
