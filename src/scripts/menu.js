@@ -1,5 +1,6 @@
 // toggle do menu hamburger 
 const menu = document.getElementsByClassName('navbar__menu');
+const navbar = document.getElementById('navbar');
 
 function hiddenToggle() { // função que troca o icone do menu hamburger (existem dois icones, um para quando o menu estiver aberto e outro para quando ele estiver fechado)
     for (let i = 0; i < menu.length; i++) {
@@ -9,7 +10,8 @@ function hiddenToggle() { // função que troca o icone do menu hamburger (exist
 
 function navToggle() {
     const nav = document.getElementById('list');
-    return nav.classList.toggle('navbar__list--is-hidden');
+    return nav.classList.toggle('navbar__list--is-hidden'),
+    navbar.classList.toggle('navbar-list--showing')
 }
 
 for (let i = 0; i < menu.length; i++) { // adiciona o evento de click nos dois icones dos menus
