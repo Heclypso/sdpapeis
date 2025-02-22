@@ -4,14 +4,14 @@ const botao = document.getElementsByTagName('button')[0].addEventListener('click
         const text = document.getElementById('message').value
     
         const emailInfo = { // definição das informações usadas na linha 27 do arquivo backend
-            to: email,
+            to: process.env.NODEMAILER_MAIL,
             subject: subject,
-            text: text
+            text: `Email do remetente: ${email}\n\n${text}`
         }
     
         try {
     
-            const response = await fetch("https://bxmailer-api.vercel.app/api/send-email", { // faz uma requisição http para o backend usando o metodo post
+            const response = await fetch("https://sdpapeis-api.vercel.app/api/send-email", { // faz uma requisição http para o backend usando o metodo post
                 method: "POST", // metodo http para enviar as informações
                 headers: { "Content-Type": "application/json" }, // definição do cabeçalho da requisição
                 body: JSON.stringify(emailInfo), // converte as informações para json

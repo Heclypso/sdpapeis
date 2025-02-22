@@ -137,7 +137,7 @@
     &::before {
         content: '';
         z-index: -1;
-        background-image: url('https://img.freepik.com/free-photo/interior-space-decorated-boho-style_23-2150771527.jpg?t=st=1739796237~exp=1739799837~hmac=23137f25df1063f4e46b3ee1b8291e1dcc8f2f2188a259038ea20779b2530fa5&w=1380');
+        background-image: url('https://servidor-estatico-alpha-six.vercel.app/hero-background-image.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -347,7 +347,6 @@
         display: grid;
         grid-template-columns: 2fr 2fr 2fr 2fr;
         gap: 24px;
-        position: relative;
 
         @media @breakpointMobile, @breakpointTablet{
             gap: 16px;
@@ -357,7 +356,12 @@
 
         &__image {
             width: 100%;
-            height: 100%;
+            height: 324px;
+
+            @media @breakpointMobile, @breakpointTablet{
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
@@ -385,7 +389,7 @@
 
     &__content {
         display: flex;
-        height: 600px;;
+        // height: 600px;;
         gap: 16px;
 
         @media @breakpointTablet {
@@ -412,6 +416,7 @@
         @media @breakpointMobile, @breakpointTablet{
             margin-left: 0;
             text-align: center;
+            margin-top: 50px;
         }
     }
 
@@ -469,7 +474,7 @@
     &::before {
         content: '';
         z-index: -1;
-        background-image: url('https://img.freepik.com/free-photo/view-room-interior-with-furniture-copy-space_23-2150680547.jpg?t=st=1739822997~exp=1739826597~hmac=1a3929ea8a95a2ec95331660b9b1d815d7fed5d58901280abf4664b0226c5dc9&w=1060');
+        background-image: url('https://servidor-estatico-alpha-six.vercel.app/form-background-image.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
