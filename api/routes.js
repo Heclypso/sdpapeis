@@ -1,8 +1,7 @@
-// const express = require('express'); // framework web para nodeJS, cria o servidor backend
 import express from 'express';
 import path from 'path';
-// const path = require('path'); // requisição do path para usar em rotas
-const app = express(); // inicializa o servidor express
+
+const app = express(); 
 const porta = 3001
 
 app.use(express.static(path.resolve("dist"))); // serve os arquivos de javascript/css/imagens estaticamente para serem usados no projeto

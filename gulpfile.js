@@ -33,14 +33,6 @@ function comprimeJavaScript(){
     .pipe(gulp.dest('dist/scripts'))
 }
 
-function comprimeApi(){
-  return gulp.src('src/api/*.js')
-    .pipe(babel()) 
-    .pipe(uglify())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist/api'))
-}
-
 function comprimeImagens(callback) {
   gulp.src('./src/images/*')
   .pipe(imagemin())
@@ -48,13 +40,12 @@ function comprimeImagens(callback) {
   callback();
 }
 
-export default gulp.series(comprimeHtml, compilaLess, comprimeJavaScript, comprimeApi, comprimeImagens);
+export default gulp.series(comprimeHtml, compilaLess, comprimeJavaScript, comprimeImagens);
 
 gulp.task('watch', (done) => {
   watch('./src/styles/*.less', {ignoreInitial: false}, gulp.series(compilaLess)), 
   watch('./src/*.html', {ignoreInitial: false}, gulp.series(comprimeHtml)),
   watch('./src/scripts/*.js', {ignoreInitial: false}, gulp.series(comprimeJavaScript));
-  watch('./src/api/*.js', {ignoreInitial: false}, gulp.series(comprimeApi));
   done();
 });
 
