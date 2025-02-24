@@ -12,9 +12,7 @@
     z-index: 1;
     height: 96px;
     padding: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .flexAlignItemsCenter(center, space-between);
 
     &-list--showing {
         background-color: @secondaryColor;
@@ -59,8 +57,7 @@
         &__item {
         margin-left: 40px;
         height: 74px;
-        display: flex;
-        align-items: center;
+        .flexAlignItemsCenter(center, auto);
 
         @media @breakpointTablet {
             margin-left: 20px;
@@ -105,8 +102,7 @@
     width: 100%;
     background: @heroBackgroundColor;
     text-align: center;
-    display: flex;
-    justify-content: center;
+    .flexAlignItemsCenter(auto, center);
 
     &__container {
         position: absolute;
@@ -153,8 +149,7 @@
 .about {
     height: 100vh;
     color: @primaryTextColor;
-    display: flex;
-    align-items: center;
+    .flexAlignItemsCenter(center, auto);
     width: 100%;
     position: relative;
     margin-bottom: 0;
@@ -259,8 +254,7 @@
             }
 
             &__reviews {
-                display: flex;
-                align-items: center;
+                .flexAlignItemsCenter(center, auto);
                 margin-left: 60px;
 
                 @media @breakpointMobile {
@@ -279,8 +273,7 @@
             }
 
             &__clients {
-                display: flex;
-                align-items: center;
+                .flexAlignItemsCenter(center, auto);
     
                 @media @breakpointMobile {
                     display: block;
@@ -325,10 +318,8 @@
     .container {
         height: 100%;
         width: 100%;
-        display: flex;
+        .flexAlignItemsCenter(center, center);
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
 
     &__title {
@@ -369,18 +360,14 @@
 .reviews {
     min-height: 100vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .flexAlignItemsCenter(center, center);
 
     .container {
         height: 80%;
         width: 100%;
         margin: 0 auto;
-        display: flex;
+        .flexAlignItemsCenter(center, center);
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
         @media @breakpointMobile{
             display: block;
@@ -389,7 +376,6 @@
 
     &__content {
         display: flex;
-        // height: 600px;;
         gap: 16px;
 
         @media @breakpointTablet {
@@ -454,7 +440,7 @@
         }
 
         &__stars {
-            
+            width: auto;
         }
     }
 }
@@ -497,9 +483,7 @@
     
     &__aside {
         width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .flexAlignItemsCenter(center, center);
 
         @media @breakpointMobile, @breakpointTablet{
             display: none;
@@ -515,15 +499,13 @@
             flex-direction: column;
 
             &__container {
-                display: flex;
+                .flexAlignItemsCenter(left, auto);
                 flex-direction: column;
-                align-items: left;
                 margin-bottom: 40px;
             }
             
             &__head {
-                display: flex;
-                align-items: center;
+                .flexAlignItemsCenter(center, auto);
 
                 &__title {
                     font-size: #font-sizes[medium];
@@ -659,8 +641,7 @@
     }
 
     &__list {
-    display: flex;
-    justify-content: space-between;
+    .flexAlignItemsCenter(auto, space-between);
     list-style: none;
 
     @media @breakpointMobile, @breakpointTablet{
@@ -682,8 +663,7 @@
         }
         
         &__container {
-            display: flex;
-            justify-content: right;
+            .flexAlignItemsCenter(auto, right);
         }
         
         &__title {
@@ -729,13 +709,11 @@
 
         &__header {
             height: 40px;
-            display: flex;
-            align-items: center;
+            .flexAlignItemsCenter(center, space-between);
             border: 1px solid @footerAccordionsStrokeColor;
             color: @primaryTextColor;
             padding-left: 16px;
             padding-right: 16px;
-            justify-content: space-between;
 
             &__icon {
 
@@ -750,8 +728,7 @@
             height: 100px;
             padding-left: 16px;
             color: @primaryTextColor;
-            display: flex;
-            justify-content: center;
+            .flexAlignItemsCenter(auto, center);
             flex-direction: column;
             background-color: @footerColor;
             border-bottom: 1px solid @footerAccordionsStrokeColor;
@@ -764,9 +741,8 @@
         &__footer {
             height: 200px;
             color: @primaryTextColor;
-            display: flex;
+            .flexAlignItemsCenter(auto, center);
             padding-left: 16px;
-            justify-content: center;
             flex-direction: column;
         }
     }

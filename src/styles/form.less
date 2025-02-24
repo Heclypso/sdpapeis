@@ -9,19 +9,16 @@
     @media @breakpointTablet {
         height: 650px;
         width: 100%;
-        display: flex;
+        .flexAlignItemsCenter(center, center);
         flex-direction: column;
-        align-items: center;
         padding-left: 0;
     }
 
     @media @breakpointMobile {
         height: 565px;
         width: 100%;
-        display: flex;
+        .flexAlignItemsCenter(center, center);
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         padding-left: 0;
         padding: 24px;
     }
@@ -53,6 +50,10 @@
         flex-direction: column;
         margin-bottom: 16px;
 
+        @media @breakpointMobile {
+            margin-bottom: 0px;
+        }
+
         @media @breakpointMobile, @breakpointTablet{
             width: 95%;
         }
@@ -64,6 +65,10 @@
         &--checkbox {
             margin-left: 10px;
             align-self: baseline;
+
+            @media @breakpointTablet{
+                margin-left: 1.5rem;
+            }
         }
     }
 
@@ -83,12 +88,10 @@
             height: 60px;
             font-size: #font-sizes[aboutTitle];
             font-weight: #font-weights[thinMedium];
-            line-height: 22px;
         }
 
         &--text-area {
             margin-bottom: 0;
-            border-radius: 10;
             height: 124px;
 
             @media @breakpointMobile, @breakpointTablet{    
