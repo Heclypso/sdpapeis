@@ -59,10 +59,10 @@ $('.form').validate({
     },
     submitHandler: function() {
         toastContainer.style.display = 'block';
-        toastDescription.innerHTML = 'Email submited';
+        toastDescription.innerHTML = 'Email enviado';
         toastBody.classList.remove('toast__body--error');
         toastHeader.classList.remove('toast__header--error');
-        toastTitle.innerHTML = 'Sucess';
+        toastTitle.innerHTML = 'Sucesso';
         setTimeout(() => {
             toastContainer.style.display = 'none';
         }, 3000);
@@ -72,7 +72,7 @@ $('.form').validate({
 
         if (camposIncorretos > 1) {
             toastContainer.style.display = 'block';
-            toastDescription.innerHTML = `There are ${camposIncorretos} incorrect fields`;
+            toastDescription.innerHTML = `Existem ${camposIncorretos} campos incorretos`;
             toastTitle.innerHTML = 'Error';
             toastBody.classList.add('toast__body--error');
             toastHeader.classList.add('toast__header--error');
@@ -81,7 +81,7 @@ $('.form').validate({
             }, 3000);
         } else {
             toastContainer.style.display = 'block';
-            toastDescription.innerHTML = `There is ${camposIncorretos} incorrect field`;
+            toastDescription.innerHTML = `Existe ${camposIncorretos} campo incorreto`;
             toastTitle.innerHTML = 'Error';
             toastBody.classList.add('toast__body--error');
             toastHeader.classList.add('toast__header--error');
